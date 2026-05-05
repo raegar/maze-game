@@ -82,9 +82,9 @@ function initGame() {
     player.nextDir = 'right';
 
     ghosts = [
-        { x: 9, y: 7, dir: 'left', color: GHOST_COLORS[0], state: 'chase' },
-        { x: 8, y: 12, dir: 'up',   color: GHOST_COLORS[1], state: 'chase' },
-        { x: 9, y: 12, dir: 'right',color: GHOST_COLORS[2], state: 'scatter' }
+        { x: 9 * TILE_SIZE + TILE_SIZE/2, y: 7 * TILE_SIZE + TILE_SIZE/2, dir: 'left', color: GHOST_COLORS[0], state: 'chase', speed: 2.5 },
+        { x: 8 * TILE_SIZE + TILE_SIZE/2, y: 12 * TILE_SIZE + TILE_SIZE/2, dir: 'up',   color: GHOST_COLORS[1], state: 'chase', speed: 2.5 },
+        { x: 9 * TILE_SIZE + TILE_SIZE/2, y: 12 * TILE_SIZE + TILE_SIZE/2, dir: 'right',color: GHOST_COLORS[2], state: 'scatter', speed: 2.5 }
     ];
 
     gameActive = true;
@@ -351,8 +351,8 @@ function draw() {
     // Draw Ghosts (Scaled)
     ghosts.forEach(g => {
         ctx.fillStyle = g.color;
-        const cx = g.x;
-        const cy = g.y;
+        const cx = g.x * s;
+        const cy = g.y * s;
         
         ctx.beginPath();
         ctx.moveTo(cx, cy - 6*s);
