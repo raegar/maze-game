@@ -345,7 +345,7 @@ function draw() {
     ctx.fillStyle = PLAYER_COLOR;
     ctx.beginPath();
     const mouthAngle = 0.2 * Math.PI + Math.sin(Date.now() / 150) * 0.1; 
-    ctx.arc(player.x, player.y, (TILE_SIZE/3 - 2)*s, mouthAngle, 2*Math.PI - mouthAngle);
+    ctx.arc(player.x * s, player.y * s, (TILE_SIZE/3 - 2)*s, mouthAngle, 2*Math.PI - mouthAngle);
     ctx.fill();
 
     // Draw Ghosts (Scaled)
