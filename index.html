@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Viewport meta tag crucial for mobile scaling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Maze Pursuit | The Neon Labyrinth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Game Container -->
+    <div id="game-container">
+        <header>
+            <h1>MAZE PURSUIT</h1>
+            <p class="subtitle">The Neon Labyrinth
+
+        </header>
+
+        <div id="hud">
+            <div class="stat-box">Score: <span id="score">0</span></div>
+            <div class="stat-box">High Score: <span id="high-score">0</span></div>
+        </div>
+
+        <!-- Canvas is now responsive via CSS -->
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- Start Overlay -->
+        <div id="overlay" class="">
+            <h2>Welcome to the Grid</h2>
+            
+Eat pellets. Avoid Chasers. Survive.
+
+            <button id="start-btn">START RUN</button>
+            <p class="legal-text"><small>Maze Pursuit is an unofficial fan tribute. Not affiliated with Bandai Namco.</small>
+
+        </div>
+
+        <!-- Game Over Overlay -->
+        <div id="game-over" style="display: none;">
+            <h2>GAME OVER</h2>
+            <button id="restart-btn">TRY AGAIN</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
